@@ -842,6 +842,7 @@ section {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 40px;
+    align-items: start;
 }
 
 .contact-info h3 {
@@ -888,6 +889,21 @@ section {
 
 .contact-method p {
     color: var(--text-light);
+}
+
+.contact-method a {
+    color: var(--text-light);
+    text-decoration: none;
+    transition: var(--transition);
+}
+
+.contact-method a:hover {
+    color: var(--primary-color);
+}
+
+.order-link {
+    color: var(--primary-color) !important;
+    font-weight: 600;
 }
 
 .social-link {
@@ -939,8 +955,12 @@ section {
     background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
 }
 
-.social-icon.twitter {
-    background: #1DA1F2;
+.social-icon.linkedin {
+    background: #0077B5;
+}
+
+.social-icon.google {
+    background: #DB4437;
 }
 
 .social-icon:hover {
@@ -954,43 +974,39 @@ section {
     font-style: italic;
 }
 
-/* Contact Form */
-.contact-form-container {
+/* Contact Map */
+.contact-map-container {
     background: var(--white);
     padding: 40px;
     border-radius: 20px;
     box-shadow: var(--shadow-md);
+    text-align: center;
 }
 
-.contact-form h3 {
+.contact-map-container h3 {
     font-size: 2rem;
-    margin-bottom: 30px;
+    margin-bottom: 15px;
     color: var(--text-dark);
 }
 
-.form-group {
+.map-description {
+    color: var(--text-light);
+    margin-bottom: 25px;
+    font-size: 1.1rem;
+    line-height: 1.6;
+}
+
+.google-map {
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: var(--shadow-sm);
     margin-bottom: 20px;
 }
 
-.form-group input,
-.form-group textarea {
+.google-map iframe {
+    display: block;
     width: 100%;
-    padding: 15px 20px;
-    border: 2px solid #E0E0E0;
-    border-radius: 10px;
-    font-family: var(--font-primary);
-    font-size: 16px;
-    transition: var(--transition);
-}
-
-.form-group input:focus,
-.form-group textarea:focus {
-    outline: none;
-    border-color: var(--primary-color);
-}
-
-.form-group textarea {
-    resize: vertical;
+    border-radius: 15px;
 }
 
 /* ===== FOOTER ===== */
@@ -1138,6 +1154,14 @@ section {
         grid-template-columns: 1fr;
     }
 
+    .contact-map-container {
+        padding: 25px;
+    }
+
+    .google-map iframe {
+        height: 350px;
+    }
+
     .map-container {
         position: relative;
         top: 0;
@@ -1192,7 +1216,15 @@ section {
         grid-template-columns: 1fr;
     }
 
-    .contact-form-container {
-        padding: 25px;
+    .social-icons {
+        justify-content: center;
+    }
+
+    .contact-methods {
+        gap: 15px;
+    }
+
+    .contact-method {
+        padding: 15px;
     }
 }
