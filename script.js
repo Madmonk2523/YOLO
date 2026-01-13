@@ -263,24 +263,7 @@ toppingBadges.forEach(badge => {
     });
 });
 
-// Gallery item hover effect with description
-const galleryItems = document.querySelectorAll('.gallery-item');
-galleryItems.forEach(item => {
-    item.addEventListener('mouseenter', function() {
-        const placeholder = this.querySelector('.gallery-placeholder');
-        if (placeholder) {
-            placeholder.style.transform = 'scale(1.1)';
-            placeholder.style.transition = 'transform 0.3s ease';
-        }
-    });
-    
-    item.addEventListener('mouseleave', function() {
-        const placeholder = this.querySelector('.gallery-placeholder');
-        if (placeholder) {
-            placeholder.style.transform = 'scale(1)';
-        }
-    });
-});
+// Gallery items are now handled by CSS hover effects on images
 
 // Active navigation link highlighting
 window.addEventListener('scroll', () => {
